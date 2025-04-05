@@ -3,6 +3,64 @@
 <head> 
     <title>Counter</title> 
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles can be written directly in this <style> tag for fun interactive design */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font for the whole page */
+            background-color: #f0f8ff; /* Light background to keep it cheerful */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        #counter {
+            font-size: 4em; /* Larger font for the counter */
+            color: #4caf50; /* Green color for the counter */
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #ffeb3b; /* Bright yellow background for the counter */
+            border-radius: 15px; /* Rounded corners for the counter box */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+            transition: transform 0.2s ease-in-out; /* Smooth transition for pop animation */
+        }
+
+        #counter:hover {
+            transform: scale(1.1); /* Scale the counter when hovered for a fun effect */
+        }
+
+        button {
+            font-size: 2em;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff6347; /* Tomato color for the buttons on hover */
+            transform: scale(1.1); /* Slightly increase the button size on hover */
+        }
+
+        button:active {
+            transform: scale(0.95); /* Shrink the button slightly when clicked for feedback */
+        }
+
+        /* Optional fun animation */
+        @keyframes buttonPress {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        button:focus {
+            animation: buttonPress 0.5s ease-in-out;
+        }
+    </style>
 </head>
 <body> 
     <div id="counter">0</div> 
